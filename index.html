@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--..............HEADER...............-->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">TM</span>
+            <span class="logo-text">TaskManager</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#" >Tasks</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
+
+    <!--.....................MAIN...............-->
+    <main class="main-container">
+        <!--...................CREATE TASK............-->
+        <section class="create-task">
+            <h2>📝 Create New Task</h2>
+            <form>
+                <label>Task Name</label>
+                <input type="text" placeholder="Enter task name" required>
+
+                <label>Assignee Email</label>
+                <input type="email" placeholder="example@email.com" required>
+                 
+                <label>Due Date</label>
+                <input type="date" required>
+
+                <label>Due Time</label>
+                <input type="time" required>
+
+                <label>Priority Level *</label>
+                <select required>
+                    <option>Low Priority</option>
+                    <option>Medium Priority</option>
+                    <option>High Priority</option>
+                </select>
+
+                <lable>Estimated Hours</lable>
+                <input type="number" placeholder="Enter estimated Hours">
+
+
+
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
