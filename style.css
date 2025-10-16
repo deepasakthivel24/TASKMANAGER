@@ -43,4 +43,96 @@ body{
     color: blue;
 
 }
+/*...............Main...........*/
+.main-container{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+    padding: 40px;
+}
+/*................Create Task.................*/
+.create-task{
+    background: white;
+    border-radius: 12px;
+    padding:25px;
+    box-shadow: 0 2px 8px black;
+}
+.create-task h2{
+    margin-bottom:15px;
+}
+.create-task label{
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+input,select,textarea{
+    width:100%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 0.9rem;
 
+}
+textarea{
+    resize: vertical;
+}
+input[type="range"]{
+    accent-color:#7b5dfb;
+}
+.progress-text{
+    text-align: center;
+    font-weight: 600;
+    color: #7b5dfb;
+    margin-top: 5px;
+}
+.task-type,.task-status{
+    margin-top: 15px;
+}
+.task-type label,.task-status label{
+    display: inline-block;
+    margin-right: 10px;
+}
+.upload-box{
+    border: 2px dashed white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.upload-box:hover{
+    border-color: #7b5dfb;
+    background:white;
+}
+.upload-label{
+    font-weight: 500;
+}
+.upload-label .sub-text{
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+
+}
+.form-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor:pointer;
+}
+.primary{
+    background:#7b5dfb;
+    color: #fff;
+
+}
+.secondary{
+    background:white;
+    color: #333;
+}
