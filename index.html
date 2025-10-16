@@ -48,6 +48,41 @@
                 <lable>Estimated Hours</lable>
                 <input type="number" placeholder="Enter estimated Hours">
 
+                <label>Project URL</label>
+                <input type="url" placeholder="https://project-link.com">
+
+                <label>Task Description</label>
+                <textarea placeholder="Describe the task..."></textarea>
+                
+                <label>Task Color</label>
+                <input type="color" value="#3b82f6">
+
+                <div class="task-type">
+                    <p>Task Type</p>
+                    <label><input type="checkbox" checked>Bug Fix</label>
+                    <label><input type="checkbox">Feature</label>
+                    <label><input type="checkbox">Enhancement</label>
+                </div>
+
+                <div class="task-status">
+                    <p>Status</p>
+                    <label><input type="radio" checked>Pending</label>
+                    <label><input type="radio">In Progress</label>
+                    <label><input type="radio">Completed</label>
+
+                </div>
+
+                <div class="upload-box">
+                    <label for="fileUpload" class="upload-label">
+                        Click to upload attachments
+                    <span class="sub-text">Supported:PDF,DOC,Images</span>
+                </label>
+                <input type="file" id="fileupload" hidden>
+            </div>
+            <div class="form-buttons">
+                
+            </div>
+
 
 
             </form>
