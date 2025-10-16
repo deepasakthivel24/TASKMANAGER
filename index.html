@@ -53,6 +53,10 @@
 
                 <label>Task Description</label>
                 <textarea placeholder="Describe the task..."></textarea>
+
+                <label>Task Progress</label>
+                <input type="range" min="0" max="100" value="0" oninput="progressvalue.textContent=this.value + '%'">
+                <p class="progress-text" id="progressvalue">0%</p>
                 
                 <label>Task Color</label>
                 <input type="color" value="#3b82f6">
