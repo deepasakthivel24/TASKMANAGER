@@ -52,7 +52,7 @@ body{
 }
 /*................Create Task.................*/
 .create-task{
-    background: white;
+    background:#fff;
     border-radius: 12px;
     padding:25px;
     box-shadow: 0 2px 8px black;
@@ -68,7 +68,7 @@ body{
 input,select,textarea{
     width:100%;
     padding: 8px;
-    border: 1px solid white;
+    border: 1px solid #ccc;
     border-radius: 6px;
     margin-top: 5px;
     font-size: 0.9rem;
@@ -94,7 +94,7 @@ input[type="range"]{
     margin-right: 10px;
 }
 .upload-box{
-    border: 2px dashed white;
+    border: 2px dashed #ccc;
     border-radius: 8px;
     text-align: center;
     padding: 15px;
@@ -104,7 +104,7 @@ input[type="range"]{
 }
 .upload-box:hover{
     border-color: #7b5dfb;
-    background:white;
+    background:#fafaff;
 }
 .upload-label{
     font-weight: 500;
@@ -133,12 +133,12 @@ input[type="range"]{
 
 }
 .secondary{
-    background:white;
+    background:#e5e7eb;
     color: #333;
 }
 /*............Active task............*/
 .active-tasks{
-    background:white;
+    background:#fff;
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 2px 8px black;
@@ -147,8 +147,8 @@ input[type="range"]{
     margin: 10px 0 20px;
 }
 .filter-buttons button{
-    border: 1px solid white;
-    background: white;
+    border: 1px solid #ddd;
+    background:#fff;
     padding: 6px 14px;
     border-radius: 20px;
     cursor: pointer;
@@ -157,7 +157,7 @@ input[type="range"]{
 .filter-buttons button.active,
 .filter-buttons button:hover{
     background:#7b5dfb;
-    color: white;
+    color: #fff;
 }
 .task-grid{
     display: grid;
@@ -165,7 +165,7 @@ input[type="range"]{
     gap: 20px;
 }
 .task-card{
-    background: white;
+    background:#fafafa;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 6px black;
@@ -197,4 +197,50 @@ input[type="range"]{
     color:blue;
     font-weight: 600;
     margin-left: 10px;
+}
+/*........Footer.........*/
+footer{
+    background:#fff;
+    margin-top: 40px;
+    padding: 40px;
+    border-top: 1px solid #eee;
+}
+.footer-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
+}
+footer h3,footer h4{
+    color:#333;
+}
+footer ul{
+    list-style: none;
+    margin-top: 10px;
+}
+footer li{
+    margin-bottom: 5px;
+    color:#555;
+}
+.footer-bottom{
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 25px;
+    color:#777;
+}
+/*.........Responsive..........*/
+@media (max-width:900px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+@media (max-width: 500px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links{
+        margin-top: 8px;
+    }
+    
 }
