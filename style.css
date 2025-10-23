@@ -18,12 +18,14 @@ body{
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid white;
+    
 }
 .logo{
     display: flex;
     align-items: center;
     font-weight: 600;
     font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 .logo-icon{
     background: #7b5dfb;
@@ -43,6 +45,11 @@ body{
     color: blue;
 
 }
+.logo-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+}
+
 /*...............Main...........*/
 .main-container{
     display: grid;
@@ -59,6 +66,7 @@ body{
 }
 .create-task h2{
     margin-bottom:15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .create-task label{
     font-weight: 500;
@@ -79,6 +87,9 @@ textarea{
 }
 input[type="range"]{
     accent-color:#7b5dfb;
+}
+input:required:invalid {
+  border: 2px solid red;
 }
 .progress-text{
     text-align: center;
@@ -159,7 +170,7 @@ input[type="range"]{
     background:#7b5dfb;
     color: #fff;
 }
-.task-grid{
+.tasks-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 20px;
@@ -186,7 +197,7 @@ input[type="range"]{
 }
 .tag.medium{
     background: white;
-    color:yellow;
+    color:green;
 }
 .status.in-progress{
     color: rgb(22, 69, 189);
@@ -197,6 +208,9 @@ input[type="range"]{
     color:blue;
     font-weight: 600;
     margin-left: 10px;
+}
+.active-tasks h2{
+    font-family: 'Times New Roman', Times, serif;
 }
 /*........Footer.........*/
 footer{
