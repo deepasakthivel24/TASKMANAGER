@@ -18,24 +18,26 @@
             <a href="#" >Tasks</a>
             <a href="#">Profile</a>
         </nav>
+        
     </header>
-  <!--.....................MAIN...............-->
+     <!-- Page Title -->
+  <section class="page-header">
+    <h2><span></span>Task Dashboard</h2>
+  </section>
+    <!--.....................MAIN...............-->
     <main class="main-container">
+
         <!--...................CREATE TASK............-->
         <section class="create-task">
             <h2>📝 Create New Task</h2>
             <form>
-                <label>Task Name *</label>
-                <input type="text" placeholder="Enter task name" required>
-
-                <label>Assignee Email *</label>
-                <input type="email" placeholder="example@email.com" required>
+                
+                <input type="text" placeholder="Task Name*" required>
+                <input type="email" placeholder="Assignee Email*" required>
                  
-                <label>Due Date *</label>
-                <input type="date" required>
-
-                <label>Due Time</label>
-                <input type="time" required>
+                
+                <input type="text" placeholder="Due Date *" onfocus="(this.type='date')" required />
+                <input type="time" placeholder="Due Time" />
 
                 <label>Priority Level *</label>
                 <select required>
@@ -48,10 +50,10 @@
                 <input type="number" placeholder="Enter estimated Hours">
 
                 <label>Project URL</label>
-                <input type="url" placeholder="https://project-link.com">
+                <input type="url" placeholder="Project URL">
 
                 <label>Task Description</label>
-                <textarea placeholder="Describe the task..."></textarea>
+                <textarea placeholder="  Task Description"></textarea>
 
                 <label>Task Progress</label>
                 <input type="range" min="0" max="100" value="0" oninput="progressvalue.textContent=this.value + '%'">
@@ -81,8 +83,8 @@
                     <span class="sub-text">Supported:PDF,DOC,Images</span>
                 </label>
                 <input type="file" id="fileUpload" hidden>
-            </div>
-            <div class="form-buttons">
+  </div>
+             <div class="form-buttons">
                 <button type="submit"class="btn primary"> ✓ Create Task</button>
                 <button type="reset" class="btn secondary" > × Reset</button>                
             </div>
@@ -97,50 +99,95 @@
                 <button>High</button>
                 <button>Medium</button>
                 <button>Low</button>
-            </div>
+              </div>
+
 
             <div class="tasks-grid">
                 <article class="task-card high">
                     <h3>Design Homepage Mockup</h3>
+                    <br>
                     <p>Create wireframes and modern UI elements for the new homepage redesign.</p>
+                    <br>
                     <p>🗓️ Due: <b>Oct 20, 2025</b></p>
+                    <br>
                     <p>👤 Sarah Johnson</p>
+                    <br><hr><br>
                     <div class="tags">
-                        <span class="tag high">HIGH</span>
-                        <span class="status in-progress">In Progress</span>
+                        <span class="tag high"><button class="btn1">● HIGH</button></span>
+                       <span class="inprogress">●<span class="status in-progress">In Progress</span></span>
                     </div>
                 </article>
 
                 <article class="task-card high">
                     <h3>Fix Login Authentication Bug</h3>
+                    <br>
                     <p>Resolve user logout issue after 5 minutes of inactivity.</p>
+                    <br>
                     <p>🗓️ Due: <b>Oct 15, 2025</b></p>
+                    <br>
                     <p>👤 Michael Chen</p>
+                    <br><hr><br>
                     <div class="tags">
-                        <span class="tag high">HIGH</span>
-                        <span class="status in-progress">Pending</span>
+                        <span class="tag high"><button class="btn1">● HIGH</button></span>
+                        <span class="pending">●<span class="status in-progress">Pending</span></span>
                     </div>
                 </article>
 
                 <article class="task-card medium">
                     <h3>Update Documentation</h3>
+                    <br>
                     <p>Review and update API documentation with endpoint examples.</p>
-                      <p>🗓️ Due: <b>Oct 25, 2025</b></p>
+                      <br>
+                    <p>🗓️ Due: <b>Oct 25, 2025</b></p>
+                    <br>
                     <p>👤 Emily Rodringuez</p>
+                    <br><hr><br>
                     <div class="tags">
-                        <span class="tag medium">MEDIUM</span>
-                        <span class="status in-progress">In Progress</span>
+                        <span class="tag medium"><button class="btn2">● MEDIUM</button></span>
+                        <span class="inprogress">●<span class="status in-progress">In Progress</span></span>
                     </div>
                 </article>
 
                 <article class="task-card medium">
                     <h3>Database Optimization</h3>
+                    <br>
                     <p>Analyze and optimize database queries to improve performance by 30%.</p>
-                      <p>🗓️ Due: <b>Oct 30, 2025</b></p>
+                    <br>  
+                    <p>🗓️ Due: <b>Oct 30, 2025</b></p>
+                    <br>
                     <p>👤 David Kim</p>
+                   <br><hr><br>
                     <div class="tags">
-                        <span class="tag medium">MEDIUM</span>
-                        <span class="status pending">Pending</span>
+                        <span class="tag medium"><button class="btn2">● MEDIUM</button></span>
+                        <span class="pending">●<span class="status pending">Pending</span></span>
+                    </div>
+                </article>
+                 <article class="task-card low">
+                    <h3>Implement Dark Mode</h3>
+                    <br>
+                    <p>Add dark mode theme Support across the application with user preference persistence.</p>
+                    <br>  
+                    <p>🗓️ Due: <b>Nov 05,2025</b></p>
+                    <br>
+                    <p>👤 Alex Thompson</p>
+                   <br><hr><br>
+                    <div class="tags">
+                        <span class="tag low"><button class="btn3">● LOW</button></span>
+                        <span class="pending">●<span class="status pending">Pending</span></span>
+                    </div>
+                </article>
+                 <article class="task-card high">
+                    <h3>User Testing Section</h3>
+                    <br>
+                    <p>Conduct user testing sessions with 10 participants to gather feedback on the new interface.</p>
+                    <br>  
+                    <p>🗓️ Due: <b>Oct 28, 2025</b></p>
+                    <br>
+                    <p>👤 Lisa Anderson</p>
+                   <br><hr><br>
+                    <div class="tags">
+                        <span class="tag high"><button class="btn1">● HIGH</button></span>
+                        <span class="completed">●<span class="status pending">Completed</span></span>
                     </div>
                 </article>
             </div>
