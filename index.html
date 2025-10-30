@@ -31,15 +31,16 @@
         <section class="create-task">
             <h2>📝 Create New Task</h2>
             <form>
-                
                 <input type="text" placeholder="Task Name*" required>
                 <input type="email" placeholder="Assignee Email*" required>
-                 
-                
-                <input type="text" placeholder="Due Date *" onfocus="(this.type='date')" required />
-                <input type="time" placeholder="Due Time" />
 
-                <label>Priority Level *</label>
+                <label>Due Date *</label>
+                <input type="date" required>
+
+                <label>Due Time</label>
+                <input type="time">
+
+                 <label>Priority Level *</label>
                 <select required>
                     <option>Low Priority</option>
                     <option>Medium Priority</option>
@@ -48,7 +49,7 @@
 
                 <lable>Estimated Hours</lable>
                 <input type="number" placeholder="Enter estimated Hours">
-
+        
                 <label>Project URL</label>
                 <input type="url" placeholder="Project URL">
 
@@ -60,23 +61,22 @@
                 <p class="progress-text" id="progressvalue">0%</p>
                 
                 <label>Task Color</label>
-                <input type="color" value="#3b82f6">
-
+                <input type="color" value=#3b82f6>
+                <br>
                 <div class="task-type">
                     <p>Task Type</p>
-                    <label><input type="checkbox" checked>Bug Fix</label>
-                    <label><input type="checkbox">Feature</label>
-                    <label><input type="checkbox">Enhancement</label>
+                    <label><input type="checkbox" name="tasktype" value="Bug Fix" checked> Bug Fix</label>
+                    <label><input type="checkbox" name="tasktype" value="Feature"> Feature</label>
+                    <label><input type="checkbox" name="tasktype" value="Enhancement"> Enhancement</label>
                 </div>
-
+                <br>
                 <div class="task-status">
                     <p>Status</p>
-                    <label><input type="radio" checked>Pending</label>
-                    <label><input type="radio">In Progress</label>
-                    <label><input type="radio">Completed</label>
-
-                </div>
-
+                    <label><input type="radio" name="status" checked> Pending</label>
+                    <label><input type="radio" name="status"> In Progress</label>
+                    <label><input type="radio" name="status"> Completed</label>
+                    </div>
+        
                 <div class="upload-box">
                     <label for="fileUpload" class="upload-label">
                        📎 Click to upload attachments
@@ -92,15 +92,15 @@
         </section>
         <!--...........Active tasks.........-->
         <section class="active-tasks">
-            <h2>✅ Active Tasks</h2>
-
-            <div class="filter-buttons">
-                <button class="active">All</button>
-                <button>High</button>
-                <button>Medium</button>
-                <button>Low</button>
-              </div>
-
+            <div class="tasks-header">
+                <h2>✅ Active Tasks</h2>
+                <div class="filters">
+                    <button class="active">All</button>
+                    <button>High</button>
+                    <button>Medium</button>
+                    <button>Low</button>
+                </div>
+            </div>
 
             <div class="tasks-grid">
                 <article class="task-card high">
