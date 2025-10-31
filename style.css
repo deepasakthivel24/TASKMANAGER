@@ -1,5 +1,4 @@
 /*..........COMMON.........*/
-
 *{
     margin:0;
     padding: 0;
@@ -10,7 +9,6 @@ body{
     background: white;
     color: black;
 }
-
 /*...........HEADER.......*/
 .navbar{
     background: #fff;
@@ -29,18 +27,17 @@ body{
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 1.2rem;
-    }
+    font-size:25px;
+}
 .logo-icon{
     background: #7b5dfb;
     color: white;
     border-radius: 25%;
     padding: 6px 10px;
     margin-right:8px;
-    
-}
+}    
 .nav-links a{
-    margin-left: 20px;
+    margin-left: 40px;
     text-decoration: none;
     color: #555;
     font-weight: 500;
@@ -50,18 +47,14 @@ body{
      background-color: #f2f1ff;
   color: #6c63ff;
   border-radius: 6px;
-
 }
 .logo-text{
-    font-size: 2.5rem;
+    font-size:25px;
 }
-
-
 /* Page Header */
 .page-header {
   margin: 30px 40px 0 40px;
 }
-
 .page-header h2 {
   font-size: 1.6rem;
   font-weight: 600;
@@ -69,7 +62,6 @@ body{
   align-items: center;
   gap: 10px;
 }
-
 .page-header h2 span {
   display: inline-block;
   width: 4px;
@@ -84,19 +76,15 @@ body{
     gap: 30px;
     padding: 40px;
 }
-
-
 /*................Create Task.................*/
 .create-task{
     background:#fff;
     border-radius: 12px;
     padding:30px;
     box-shadow: 0 2px 8px black;
-   
 }
 .create-task h2{
     margin-bottom:15px;
-   
 }
 .create-task label{
     font-weight: 500;
@@ -110,7 +98,6 @@ input,select,textarea{
     border-radius: 6px;
     margin-top: 5px;
     font-size: 0.9rem;
-
 }
 textarea{
     resize: vertical;
@@ -118,7 +105,6 @@ textarea{
     height: 100px;
     flex-wrap: wrap;
 }
-
 input[type="range"]{
     accent-color:#7b5dfb;
 }
@@ -128,7 +114,6 @@ input[type="range"]{
     color: #7b5dfb;
     margin-top: 5px;
 }
-
 .task-type label,.task-status label{
     display:inline-block;
     margin-right:10px;
@@ -140,7 +125,6 @@ input[type="radio"] {
   accent-color: #007bff; 
   cursor: pointer;
 }
-
 .upload-box{
     border: 2px dashed #ccc;
     border-radius: 8px;
@@ -178,7 +162,6 @@ input[type="radio"] {
 .primary{
     background:#7b5dfb;
     color: #fff;
-
 }
 .secondary{
     background:#e5e7eb;
@@ -192,11 +175,9 @@ input[type="radio"] {
   flex-direction: column;
   gap: 15px; 
 }
-
 .create-task input:required:invalid {
   border: 2px solid red;
 }
-
 .create-task select{
   padding: 10px;
   border-radius: 8px;
@@ -205,19 +186,15 @@ input[type="radio"] {
   width: 100%;
   background-color: #fff;
 }
-
 .create-task input[type="date"],
 .create-task input[type="time"] {
   appearance: none;
   background-color: #fff;
   margin: 0;
 }
-
-
 .create-task input[type="date"] {
   margin-bottom: 10px;
 }
-
 .create-task input:focus,
 .create-task select:focus {
   border-color: #6a5af9;
@@ -225,9 +202,35 @@ input[type="radio"] {
 .upload-box label:hover{
     cursor: pointer;
 }
-
+.task-color {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.create-task label{
+    color: #777;
+}
+.task-color label {
+  font-weight: 500;
+  color: #777;
+  margin-bottom: 6px;
+}
+.task-color input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.task-color input[type="color"]:hover {
+  border-color: #7a5cf0;
+  box-shadow: 0 0 4px rgba(122, 92, 240, 0.3);
+}
 /*............Active task............*/
-
 .active-tasks {
     background: #fff;
     border-radius: 12px;
@@ -240,7 +243,6 @@ input[type="radio"] {
     align-items: center;
     flex-wrap: wrap;
 }
-
 .filters button {
     border: 1px solid #ddd;
     background: #fff;
@@ -249,7 +251,6 @@ input[type="radio"] {
     margin-left: 5px;
     cursor: pointer;
 }
-
 .filters button.active {
     background: #6c63ff;
     color:black;
@@ -259,7 +260,6 @@ input[type="radio"] {
     color:white;
     background-color: #6a5af9;
 }
-
 .tasks-grid{
     display: grid;
     grid-template-columns: repeat(2,minmax(250px, 2fr));
@@ -275,7 +275,6 @@ input[type="radio"] {
     padding: 20px;
     box-shadow: 0 2px 6px black;
     transition: 0.3s;
- 
 }
 .task-card:hover{
     transform: translateY(-3px);
@@ -288,7 +287,6 @@ input[type="radio"] {
     display: flex;
     justify-content: space-between; 
 }
-
 .tag.medium {
   color: #f7a400;
   background: #fff3da;
@@ -301,7 +299,6 @@ input[type="radio"] {
     padding: 3px 8px;
   border-radius: 10px;
   border: none;
-
 }
 .btn2{
     color :#f7a400;;
@@ -309,7 +306,6 @@ input[type="radio"] {
     padding: 3px 8px;
   border-radius: 10px;
   border: none;
-
 }
 .btn3{
      color :rgb(18, 153, 18);;
@@ -317,7 +313,6 @@ input[type="radio"] {
     padding: 3px 8px;
   border-radius: 10px;
   border: none;
-
 }
 .tag.high{
     background: white;
@@ -335,7 +330,6 @@ input[type="radio"] {
     color:black;
     font-weight: 600;
     margin-left: 10px;
-    
 }
 .status.pending{
     color:black;
@@ -354,8 +348,6 @@ input[type="radio"] {
 .inprogress,.pending,.completed{
     font-size:small;
 }
-
-
 /*........Footer.........*/
 footer{
     background:#fff;
@@ -393,16 +385,6 @@ footer li{
     }
 }
 @media (max-width: 500px){
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-links{
-        margin-top: 8px;
-    }
-    
-}
-@media (max-width: 500px){
     .tasks-grid{
         grid-template-columns:auto;
     }
@@ -411,5 +393,48 @@ footer li{
     textarea{
         width: auto;
         padding: 20px;
+    }
+}
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  font-size: 34px;
+  cursor: pointer;
+  color: #333;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .menu-icon {
+    display: block;
+    background-color:#f5f5f5;
+    border-radius: 25%;
+    padding:0 10px;
+   margin-left:auto;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+  }
+  .nav-links a {
+    padding: 12px;
+    text-align: left;
+    margin: 0;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+}
+@media (max-width: 768px){
+    .filters{
+        padding-top: 20px;
     }
 }

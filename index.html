@@ -7,27 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--..............HEADER...............-->
+<!--..............HEADER...............-->
     <header class="navbar">
-        <div class="logo">
-            <span class="logo-icon">TM</span>
-            <span class="logo-text">TaskManager</span>
-        </div>
-        <nav class="nav-links">
-            <a href="#" class="active">Dashboard</a>
-            <a href="#" >Tasks</a>
-            <a href="#">Profile</a>
-        </nav>
-        
-    </header>
-     <!-- Page Title -->
+  <div class="logo">
+    <span class="logo-icon">TM</span>
+    <span class="logo-text">TaskManager</span>
+  </div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <nav class="nav-links">
+    <a href="#" class="active">Dashboard</a>
+    <a href="#">Tasks</a>
+    <a href="#">Profile</a>
+  </nav>
+</header>
+<!-- Page Title -->
   <section class="page-header">
     <h2><span></span>Task Dashboard</h2>
   </section>
-    <!--.....................MAIN...............-->
+<!--.....................MAIN...............-->
     <main class="main-container">
-
-        <!--...................CREATE TASK............-->
+<!--...................CREATE TASK............-->
         <section class="create-task">
             <h2>📝 Create New Task</h2>
             <form>
@@ -47,7 +49,7 @@
                     <option>High Priority</option>
                 </select>
 
-                <lable>Estimated Hours</lable>
+                <label>Estimated Hours</label>
                 <input type="number" placeholder="Enter estimated Hours">
         
                 <label>Project URL</label>
@@ -59,9 +61,11 @@
                 <label>Task Progress</label>
                 <input type="range" min="0" max="100" value="0" oninput="progressvalue.textContent=this.value + '%'">
                 <p class="progress-text" id="progressvalue">0%</p>
-                
-                <label>Task Color</label>
-                <input type="color" value=#3b82f6>
+            
+                <div class="task-color">
+                <label for="taskcolor">Task Color</label>
+                <input type="color" id="taskcolor" name="taskcolor" value="#000000">
+                </div>
                 <br>
                 <div class="task-type">
                     <p>Task Type</p>
@@ -81,16 +85,16 @@
                     <label for="fileUpload" class="upload-label">
                        📎 Click to upload attachments
                     <span class="sub-text">Supported:PDF,DOC,Images</span>
-                </label>
+                    </label>
                 <input type="file" id="fileUpload" hidden>
-  </div>
+                </div>
              <div class="form-buttons">
                 <button type="submit"class="btn primary"> ✓ Create Task</button>
                 <button type="reset" class="btn secondary" > × Reset</button>                
             </div>
          </form>
         </section>
-        <!--...........Active tasks.........-->
+<!--...........Active tasks.........-->
         <section class="active-tasks">
             <div class="tasks-header">
                 <h2>✅ Active Tasks</h2>
@@ -162,6 +166,7 @@
                         <span class="pending">●<span class="status pending">Pending</span></span>
                     </div>
                 </article>
+
                  <article class="task-card low">
                     <h3>Implement Dark Mode</h3>
                     <br>
@@ -176,6 +181,7 @@
                         <span class="pending">●<span class="status pending">Pending</span></span>
                     </div>
                 </article>
+
                  <article class="task-card high">
                     <h3>User Testing Section</h3>
                     <br>
@@ -193,7 +199,7 @@
             </div>
         </section>
     </main>
-    <!--.....Footer.......-->
+<!--.....Footer.......-->
     <footer>
         <div class="footer-columns">
             <div>
@@ -209,25 +215,25 @@
                     <li>Integrations</li>
                 </ul>
             </div>
-        <div>
-        <h4>Resources</h4>
-        <ul>
-            <li>Documentation</li>
-            <li>Tutorials</li>
-            <li>API Reference</li>
-            <li>Support</li>
-        </ul>
-    </div>
-<div>
-    <h4>Company</h4>
-    <ul>
-        <li>About Us</li>
-        <li>Careers</li>
-        <li>Privacy Policy</li>
-        <li>Terms of Service</li>
-    </ul>
-    </div>
-</div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li>Documentation</li>
+                    <li>Tutorials</li>
+                    <li>API Reference</li>
+                    <li>Support</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </div>
+        </div>
 <p class="footer-bottom">
  | © 2025 TaskManager.All rights reserved.Built with ❤️ for productivity.
 </p>
