@@ -9,20 +9,18 @@
 <body>
 <!--..............HEADER...............-->
     <header class="navbar">
-  <div class="logo">
-    <span class="logo-icon">TM</span>
-    <span class="logo-text">TaskManager</span>
-  </div>
-
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
-  <nav class="nav-links">
-    <a href="#" class="active">Dashboard</a>
-    <a href="#">Tasks</a>
-    <a href="#">Profile</a>
-  </nav>
-</header>
+        <div class="logo">
+          <span class="logo-icon">TM</span>
+          <span class="logo-text">TaskManager</span>
+        </div>
+         <input type="checkbox" id="menu-toggle">
+         <label for="menu-toggle" class="menu-icon">&#9776;</label>
+         <nav class="nav-links">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Tasks</a>
+            <a href="#">Profile</a>
+        </nav>
+    </header>
 <!-- Page Title -->
   <section class="page-header">
     <h2><span></span>Task Dashboard</h2>
@@ -35,43 +33,50 @@
             <form>
                 <input type="text" placeholder="Task Name*" required>
                 <input type="email" placeholder="Assignee Email*" required>
+        
+                <div class="input-box">
+                <label for="due-date">Due date*</label>
+                <input type="date" id="due-date" name="due-date"required>
+              </div>
 
-                <label>Due Date *</label>
-                <input type="date" required>
+              <div class="input-box">
+                <label for="due-time">Due Time</label>
+                <input type="time"id="due-time" name="due-time">
+              </div>
 
-                <label>Due Time</label>
-                <input type="time">
-
-                 <label>Priority Level *</label>
+              <div class="input-box">
+                <label for="Priority Level*">Priority Level*</label>
                 <select required>
                     <option>Low Priority</option>
                     <option>Medium Priority</option>
                     <option>High Priority</option>
                 </select>
+              </div>
 
-                <label>Estimated Hours</label>
-                <input type="number" placeholder="Enter estimated Hours">
-        
-                <label>Project URL</label>
+              <div class="input-box">
+                <label for="Estimated hours">Estimated Hours</label>
+                <input type="number" placeholder="54">
+               </div>
                 <input type="url" placeholder="Project URL">
-
-                <label>Task Description</label>
+                
                 <textarea placeholder="  Task Description"></textarea>
-
-                <label>Task Progress</label>
+        
+                <div class="task-progress">
+                <p>Task Progress</p>
                 <input type="range" min="0" max="100" value="0" oninput="progressvalue.textContent=this.value + '%'">
-                <p class="progress-text" id="progressvalue">0%</p>
-            
-                <div class="task-color">
-                <label for="taskcolor">Task Color</label>
+                <h4 class="progress-text" id="progressvalue">0%</h4>
+             </div>
+
+             <div class="task-color">
+               <p>Task color</p>
                 <input type="color" id="taskcolor" name="taskcolor" value="#000000">
                 </div>
                 <br>
                 <div class="task-type">
                     <p>Task Type</p>
-                    <label><input type="checkbox" name="tasktype" value="Bug Fix" checked> Bug Fix</label>
-                    <label><input type="checkbox" name="tasktype" value="Feature"> Feature</label>
-                    <label><input type="checkbox" name="tasktype" value="Enhancement"> Enhancement</label>
+                    <label><input type="checkbox" name="tasktype" value="Bug Fix" checked>  Bug Fix</label>
+                    <label><input type="checkbox" name="tasktype" value="Feature">  Feature</label>
+                    <label><input type="checkbox" name="tasktype" value="Enhancement">  Enhancement</label>
                 </div>
                 <br>
                 <div class="task-status">
@@ -84,16 +89,20 @@
                 <div class="upload-box">
                     <label for="fileUpload" class="upload-label">
                        📎 Click to upload attachments
-                    <span class="sub-text">Supported:PDF,DOC,Images</span>
                     </label>
+                    <br>
+                     <span class="sub-text">Supported:PDF,DOC,Images</span>
                 <input type="file" id="fileUpload" hidden>
                 </div>
              <div class="form-buttons">
                 <button type="submit"class="btn primary"> ✓ Create Task</button>
-                <button type="reset" class="btn secondary" > × Reset</button>                
+                <button class="reset-btn">
+                   <span class="reset-icon">✖</span>
+                   <span class="reset-text">Reset</span>
+                </button>
             </div>
-         </form>
-        </section>
+        </form>
+    </section>
 <!--...........Active tasks.........-->
         <section class="active-tasks">
             <div class="tasks-header">
@@ -117,7 +126,7 @@
                     <p>👤 Sarah Johnson</p>
                     <br><hr><br>
                     <div class="tags">
-                        <span class="tag high"><button class="btn1">● HIGH</button></span>
+                       <span class="tag high"><button class="btn1">● HIGH</button></span>
                        <span class="inprogress">●<span class="status in-progress">In Progress</span></span>
                     </div>
                 </article>
@@ -204,7 +213,7 @@
         <div class="footer-columns">
             <div>
                 <h3>TaskManager</h3>
-                <p>Organize your work,boost your productivity.</p>
+                <p>Organize your work and life,finally.</p>
             </div>
             <div>
                 <h4>Features</h4>

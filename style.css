@@ -42,11 +42,16 @@ body{
     color: #555;
     font-weight: 500;
     transition: 0.3s;
+    background: #fff;
+    border-radius:25px;
+    padding: 5px 12px;
+    cursor: pointer;
 }
 .nav-links a.active, .nav-links a:hover{
      background-color: #f2f1ff;
-  color: #6c63ff;
+  color:#0d4ea4;
   border-radius: 6px;
+  background-color:#f5f5f5 ;
 }
 .logo-text{
     font-size:25px;
@@ -80,16 +85,21 @@ body{
 .create-task{
     background:#fff;
     border-radius: 12px;
-    padding:30px;
+    padding:20px;
     box-shadow: 0 2px 8px black;
 }
 .create-task h2{
     margin-bottom:15px;
 }
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+  padding: 15px;
+}
 .create-task label{
     font-weight: 500;
     display: block;
-    margin-top: 10px;
+    margin:auto;
 }
 input,select,textarea{
     width:100%;
@@ -99,76 +109,89 @@ input,select,textarea{
     margin-top: 5px;
     font-size: 0.9rem;
 }
-textarea{
+.create-task textarea {
+
     resize: vertical;
-    width:300px;
     height: 100px;
-    flex-wrap: wrap;
+    text-align:auto;
+    padding-top:30px;
+    margin-left:0;
+    padding-left: 0;
+}
+.create-task textarea:hover{
+  cursor: pointer;
 }
 input[type="range"]{
-    accent-color:#7b5dfb;
+    accent-color:#0d4ea4;
 }
-.progress-text{
-    text-align: center;
+
+.task-progress h4{
+    text-align:center;
     font-weight: 600;
-    color: #7b5dfb;
+    color:#0d4ea4;
     margin-top: 5px;
+}
+input[type="range"]:hover{
+  cursor: pointer;
 }
 .task-type label,.task-status label{
     display:inline-block;
-    margin-right:10px;
+    margin-right:25px;
+    margin-top: 15px;
+    color: black;
 }
 input[type="checkbox"],
 input[type="radio"] {
   width: 16px;
   height: 16px;
-  accent-color: #007bff; 
+  accent-color:#0d4ea4; 
   cursor: pointer;
 }
 .upload-box{
     border: 2px dashed #ccc;
     border-radius: 8px;
     text-align: center;
-    padding: 15px;
+    padding: 25px;
     margin-top: 15px;
     cursor: pointer;
     transition: 0.3s;
+    height: 120px;
 }
+
 .upload-box:hover{
     border-color: #7b5dfb;
     background:#fafaff;
     cursor: pointer;
 }
-.upload-label{
-    font-weight: 500;
-}
-.upload-label .sub-text{
+
+.sub-text{
     display: block;
     font-size: 0.8rem;
-    color: #777;
+    color:#777;
 }
 .form-buttons{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+  
+}
+.upload-box:hover{
+  background-color:#e5e7eb;
 }
 .btn{
-    padding: 10px 20px;
+    padding: 20px 40px;
     border: none;
     border-radius: 6px;
     font-weight: 600;
     cursor:pointer;
 }
 .primary{
-    background:#7b5dfb;
+    background:#0d4ea4;
     color: #fff;
 }
 .secondary{
     background:#e5e7eb;
     color: #333;
-}
-.create-task input[type="date"] {
-  margin-bottom: 10px;
 }
 .create-task form {
   display: flex;
@@ -186,15 +209,7 @@ input[type="radio"] {
   width: 100%;
   background-color: #fff;
 }
-.create-task input[type="date"],
-.create-task input[type="time"] {
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-}
-.create-task input[type="date"] {
-  margin-bottom: 10px;
-}
+
 .create-task input:focus,
 .create-task select:focus {
   border-color: #6a5af9;
@@ -207,13 +222,11 @@ input[type="radio"] {
   flex-direction: column;
   margin-bottom: 20px;
 }
-.create-task label{
-    color: #777;
-}
 .task-color label {
   font-weight: 500;
   color: #777;
   margin-bottom: 6px;
+  
 }
 .task-color input[type="color"] {
   width: 100%;
@@ -229,6 +242,92 @@ input[type="radio"] {
 .task-color input[type="color"]:hover {
   border-color: #7a5cf0;
   box-shadow: 0 0 4px rgba(122, 92, 240, 0.3);
+}
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+     
+}
+.input-box input,
+.input-box select,
+.input-box textarea{
+  width: 100%;
+ padding: 12px;
+ border: 2px solid #ccc;
+ border-radius: 6px;
+ outline: none;
+ font-size: 0.95rem;
+ color:#333;
+ background: transparent;
+}
+.input-box label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: #fff;
+  padding: 0 6px;
+  color:#637aff;
+    }
+    .input-box input:focus {
+      border-color: #4a3aff;
+    }
+
+    .input-box input[type="time"] {
+      border: 2px solid #ccc;
+    }
+
+    .input-box input[type="time"]:focus {
+      border-color: #4a3aff;
+    }
+    .input-box input[type="date"]:focus {
+      border-color: #4a3aff;
+    }
+     .input-box input[type="number"]:focus {
+      border-color: #4a3aff;
+    }
+    .input-box input[type="number"]{
+         border: 2px solid #ccc;
+    }
+    .task-progress p,.task-color p{
+      color: #777;
+    }
+
+    .input-box input[type="number"]:hover {
+      cursor: pointer;
+    }
+    input[type="email"]:hover{
+      cursor: pointer;
+    }
+     input[type="text"]:hover{
+      cursor: pointer;
+    }
+     input[type="url"]:hover{
+      cursor: pointer;
+    }
+    .input-box input[type="time"]:hover {
+       cursor: pointer;
+    }
+    .input-box input[type="date"]:hover {
+     cursor: pointer;
+    }
+/*.....Reset button....*/
+    .reset-btn {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  background:#ebebeb;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+    }
+.reset-icon {
+  font-size: 18px;
+  margin-bottom: 2px;
 }
 /*............Active task............*/
 .active-tasks {
@@ -252,13 +351,13 @@ input[type="radio"] {
     cursor: pointer;
 }
 .filters button.active {
-    background: #6c63ff;
-    color:black;
+    background: #0d4ea4;
+    color:white;
    border:none;
 }
 .filters button:hover{
     color:white;
-    background-color: #6a5af9;
+    background-color:#0d4ea4;
 }
 .tasks-grid{
     display: grid;
@@ -282,8 +381,6 @@ input[type="radio"] {
 .tags{
     padding: 4px 10px;
     border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
     display: flex;
     justify-content: space-between; 
 }
@@ -291,53 +388,57 @@ input[type="radio"] {
   color: #f7a400;
   background: #fff3da;
   padding: 3px 8px;
-  border-radius: 10px;
+  border-radius:25px;
+  border: none; 
+}
+.tag.high{
+    color : #ff5b5b;
+    background: #ffe6e6;
+    padding: 3px 8px;
+  border-radius:25px;
+  border: none;
+}
+.tag.low{
+    color :rgb(18, 153, 18);;
+    background:rgb(112, 243, 177);
+    padding: 3px 8px;
+      border-radius:25px;
+  border: none;
 }
 .btn1{
     color : #ff5b5b;
     background: #ffe6e6;
     padding: 3px 8px;
-  border-radius: 10px;
+  border-radius:25px;
   border: none;
+  font-weight: bold;
 }
 .btn2{
     color :#f7a400;;
     background:#fff3da;
     padding: 3px 8px;
-  border-radius: 10px;
+    border-radius:25px;
   border: none;
+   font-weight: bold;
 }
 .btn3{
      color :rgb(18, 153, 18);;
     background:rgb(112, 243, 177);
     padding: 3px 8px;
-  border-radius: 10px;
+  border-radius:25px;
   border: none;
-}
-.tag.high{
-    background: white;
-    color:#ff6b6b;
-}
-.tag.medium{
-    background: white;
-    color:#f4b400;
-}
-.tag.low{
-    background: white;
-    color:rgb(6, 141, 6);
+   font-weight: bold;
 }
 .status.in-progress{
     color:black;
-    font-weight: 600;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 .status.pending{
     color:black;
-    font-weight: 600;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 .inprogress{
-    color: blue;
+    color:blue;
 }
 .pending{
     color: orange;
@@ -345,9 +446,16 @@ input[type="radio"] {
 .completed{
     color: rgb(8, 145, 8);
 }
-.inprogress,.pending,.completed{
-    font-size:small;
+.active-tasks p{
+  color: #777;
 }
+.status.in-progress,.status.pending{
+  font-size: 15px;
+}
+.tags span{
+  font-size: 20px;
+}
+
 /*........Footer.........*/
 footer{
     background:#fff;
@@ -376,6 +484,10 @@ footer li{
     font-size: 0.9rem;
     margin-top: 25px;
     color:#777;
+}
+.footer-columns p{
+  margin-top: 10px;
+  color:#777 ;
 }
 /*.........Responsive..........*/
 @media (max-width:900px) {
